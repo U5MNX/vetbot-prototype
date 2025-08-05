@@ -3,48 +3,62 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>TIXAE Agents HTML Sample</title>
+        <title>VetBot Prototype</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                background-color: #1a1a2e;
+                color: #fff;
+                font-family: 'Roboto', sans-serif;
+                text-align: center;
+                padding: 20px;
+            }
+            h1, h2 {
+                margin-bottom: 10px;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            #VG_OVERLAY_CONTAINER {
+                width: 800px;
+                height: 600px;
+                margin: 0 auto;
+                border: 2px solid #fff;
+                box-shadow: 0 0 10px rgba(255,255,255,0.5);
+            }
+        </style>
     </head>
     <body>
-        <h1>TIXAE Agents HTML Sample</h1>
-        <p>This is basically your website here :)</p>
-        <p>Did you know that the strongest muscle in the body is the tongue?</p>
+        <h1>VetBot Prototype</h1>
+        <p>Welcome to the VetBot prototype demonstration. This AI-powered chatbot is designed for veterinary clinics to assist with frequently asked questions, capture leads, and schedule appointments intelligently.</p>
+        <p><em>Note: This is a prototype demonstration and not a live service.</em></p>
+        <h2>Chat with VetBot</h2>
+        <div id="VG_OVERLAY_CONTAINER"></div>
 
-        
-<div style="width: 0; height: 0;" id="VG_OVERLAY_CONTAINER">
-    <!-- Here is where TIXAE Agents renders the widget. -->
-    <!-- Set render to 'full-width' then adjust the width and height to 500px (for example) to render the chatbot itself without the popup. -->
-</div>
-
-<!-- Remove 'defer' if you want widget to load faster (Will affect website loading) -->
-<script defer>
-    (function() {
-        window.VG_CONFIG = {
-            ID: "hxmvdt7ohvitq2aw", // YOUR AGENT ID
-            region: 'eu', // YOUR ACCOUNT REGION 
-            render: 'bottom-right', // can be 'full-width' or 'bottom-left' or 'bottom-right'
-            stylesheets: [
-                // Base TIXAE Agents CSS
-                "https://vg-bunny-cdn.b-cdn.net/vg_dev_build/styles.css",
-                // Add your custom css stylesheets, Can also add relative URL ('/public/your-file.css)
-            ],
-            // THIS IS SUPPOSED TO BE CHANGED OR REMOVED.
-            // user: {
-            //     name: 'John Doe', // User's name
-            //     email: 'johndoe@gmail.com', // User's email
-            //     phone: '+1234567890', // User's phone number
-            // }
-            // Optional user data -- end
-            // **
-            // userID: 'USER_ID', // If you want to use your own user_id
-            // autostart: true, // Whether to autostart the chatbot with the proactive message
-        }
-        var VG_SCRIPT = document.createElement("script");
-        VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_dev_build/vg_bundle.js";
-        VG_SCRIPT.defer = true; // Remove 'defer' if you want widget to load faster (Will affect website loading)
-        document.body.appendChild(VG_SCRIPT);
-    })()
-</script>
-
+        <script defer>
+            (function() {
+                window.VG_CONFIG = {
+                    ID: "hxmvdt7ohvitq2aw", // YOUR AGENT ID
+                    region: 'eu', // YOUR ACCOUNT REGION
+                    render: 'full-width', // Changed to full-width for direct display
+                    stylesheets: [
+                        "https://vg-bunny-cdn.b-cdn.net/vg_dev_build/styles.css",
+                        // Add your custom css stylesheets if needed
+                    ],
+                    // user: {
+                    //     name: 'John Doe',
+                    //     email: 'johndoe@gmail.com',
+                    //     phone: '+1234567890',
+                    // }
+                    // userID: 'USER_ID',
+                    // autostart: true,
+                }
+                var VG_SCRIPT = document.createElement("script");
+                VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_dev_build/vg_bundle.js";
+                VG_SCRIPT.defer = true;
+                document.body.appendChild(VG_SCRIPT);
+            })()
+        </script>
     </body>
-</html>    
+</html>  
+
